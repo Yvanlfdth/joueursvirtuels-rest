@@ -9,7 +9,7 @@ use OwenIt\Auditing\Contracts\Auditable;
 
 class MediaModel extends Model
 {
-    use SoftDeletes, Auditable;
+    use SoftDeletes, \OwenIt\Auditing\Auditable;
 
     protected $table = "media_models";
     protected $hidden = ["created_at", "updated_at", "deleted_at"];

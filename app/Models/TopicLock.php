@@ -8,7 +8,7 @@ use OwenIt\Auditing\Contracts\Auditable;
 
 class TopicLock extends Model
 {
-    use SoftDeletes, Auditable;
+    use SoftDeletes, \OwenIt\Auditing\Auditable;
 
     protected $table = "topic_locks";
     protected $hidden = ["updated_at", "deleted_at"];

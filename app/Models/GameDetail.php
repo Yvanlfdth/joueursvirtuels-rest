@@ -9,7 +9,7 @@ use OwenIt\Auditing\Contracts\Auditable;
 
 class GameDetail extends Model
 {
-    use SoftDeletes, Auditable;
+    use SoftDeletes, \OwenIt\Auditing\Auditable;
 
     protected $table = "game_details";
     protected $hidden = ["created_at", "updated_at", "deleted_at"];

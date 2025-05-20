@@ -8,7 +8,7 @@ use OwenIt\Auditing\Contracts\Auditable;
 
 class ArticlePage extends Model
 {
-    use SoftDeletes, Auditable;
+    use SoftDeletes, \OwenIt\Auditing\Auditable;
 
     protected $table = "article_pages";
     protected $hidden = ["created_at", "updated_at", "deleted_at"];

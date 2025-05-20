@@ -9,7 +9,7 @@ use OwenIt\Auditing\Contracts\Auditable;
 
 class UserModerator extends Model
 {
-    use SoftDeletes, Auditable;
+    use SoftDeletes, \OwenIt\Auditing\Auditable;
 
     protected $table = "user_moderators";
     protected $hidden = ["created_at", "updated_at", "deleted_at"];

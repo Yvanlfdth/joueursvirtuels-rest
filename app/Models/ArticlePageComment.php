@@ -8,7 +8,7 @@ use OwenIt\Auditing\Contracts\Auditable;
 
 class ArticlePageComment extends Model
 {
-    use SoftDeletes, Auditable;
+    use SoftDeletes, \OwenIt\Auditing\Auditable;
 
     protected $table = "article_page_comments";
     protected $hidden = ["updated_at", "deleted_at"];

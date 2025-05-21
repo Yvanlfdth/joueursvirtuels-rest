@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use OwenIt\Auditing\Contracts\Auditable;
+use OwenIt\Auditing\Contracts\Auditable as AuditableContract;
+use OwenIt\Auditing\Auditable;
 
-class Forum extends Model
+class Forum extends Model implements AuditableContract
 {
-    use SoftDeletes, \OwenIt\Auditing\Auditable;
+    use SoftDeletes, Auditable;
 
     protected $table = "forums";
     protected $hidden = ["created_at", "updated_at", "deleted_at"];
